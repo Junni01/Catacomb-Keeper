@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catacomb Keeper v. 0.1</title>
+
+</head>
+<body>
+<script src="jquery-3.3.1.js"></script>
+<script src="Monsters.js"></script>
+<script src="Lords.js"></script>
+<script src="Rooms.js"></script>
+    <div id="welcomeScreen">
+        <H1>Welcome to Catacomb Keeper</H1>
+        <p>Select you catacomb lord: </p>
+        <select id="selectLord" onchange="displayLord()">
+        <option value=-1>Choose...</option>
+        </select>
+        <button onclick="chooseLord()">OK</button>
+        <div id="lordInfo">
+         <div>
+
+         </div>
+        </div>
+    </div>
+    <div id="rooms"></div>
+<script src="Keeper.js"></script>
+</body>
+</html>
