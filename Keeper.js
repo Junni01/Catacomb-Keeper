@@ -1,9 +1,9 @@
 let activeLord;
 // let catacombsLayout = [0,1,5,1,1,5,2,5,6];
 let catacombsLayout = [0,1,3,1,1,3,2,3,4];
-console.log(lvlZeroRooms);
 
 
+// Populate Lord selection dropdown
 var select = document.getElementById("selectLord")
 for (let i = 0; i < lords.length; i++) {
     let el = document.createElement("option");
@@ -13,9 +13,7 @@ for (let i = 0; i < lords.length; i++) {
 }
 
 
-
-
-
+// Display information of the selected Lord
 function displayLord() {
     value = document.getElementById("selectLord").value;
     var lordInfo = document.getElementById("lordInfo")
@@ -40,6 +38,8 @@ function displayLord() {
     }
 }
 
+
+// Go button pressed.
 function chooseLord() {
 
     var selectedLordID = $("#selectLord").val();
@@ -50,10 +50,15 @@ function chooseLord() {
     }
 }
 
+// Generate rooms.
 function generateRooms() {
+    roomNumber = 0;
     $("#rooms").show();
     for (let roomlvl of catacombsLayout) {
 
+        roomNumber += 1;
+
+        if (roomlvl == )
         switch (roomlvl) {
             case 0: {
                 let currentRoom = lvlZeroRooms.pop();
@@ -97,12 +102,6 @@ function generateRooms() {
             }
 
         }
-
-
-
     }
-
-
-
-
 }
+

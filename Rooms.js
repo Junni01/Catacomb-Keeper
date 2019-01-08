@@ -116,7 +116,9 @@ var lvlZeroRooms = [
             LevelThree: [{name: "Giant Scorpion", id: 21, amount: 1}],
             LevelFour: [],
         }
-    },
+    }
+];
+var lvlOneRooms = [
     {
         id: '11',
         name: 'The Vermin Hovel',
@@ -507,7 +509,9 @@ var lvlZeroRooms = [
             LevelThree: [{name: "Orc Wolf Rider", id: 25, amount: 1}],
             LevelFour: [{name: "Venomous Spider", id: 42, amount: 1}],
         }
-    },
+    }
+];
+var lvlTwoRooms = [
     {
         id: '44',
         name: 'Qurlathorm',
