@@ -2,7 +2,6 @@ let activeLord;
 // let catacombsLayout = [0,1,5,1,1,5,2,5,6];
 let catacombsLayout = [0,1,3,1,1,3,2,3,4];
 
-
 // Populate Lord selection dropdown
 var select = document.getElementById("selectLord")
 for (let i = 0; i < lords.length; i++) {
@@ -46,62 +45,105 @@ function chooseLord() {
     if (selectedLordID != -1) {
         activeLord = lords[selectedLordID]
         $("#welcomeScreen").hide();
-        generateRooms();
+        generateCatacomb();
     }
 }
 
 // Generate rooms.
-function generateRooms() {
-    roomNumber = 0;
+function generateCatacomb() {
+    let roomNumber = 0;
     $("#rooms").show();
     for (let roomlvl of catacombsLayout) {
 
         roomNumber += 1;
 
-        if (roomlvl == )
-        switch (roomlvl) {
-            case 0: {
-                let currentRoom = lvlZeroRooms.pop();
-                let title = "<h1>" + currentRoom.name + "<h1>"
-                let supresses = "<h4>" + "This room suppresses: " + currentRoom.suppresses + "</h4>>"
-                let lvlOneString = '';
-                console.log(currentRoom.monsters["Level 1"]);
-                if (currentRoom.monsters["Level 1"] != null) {
-                    for (let monster of currentRoom.monsters["Level 1"]) {
-                        console.log(monster);
-                        lvlOneString += "Name: " + monster.name + " Amount: " + monster.amount  + "</br>"
-                    }
+        generateRoom(roomlvl)
 
-                } else {
-                    lvlOneString = "No Monsters";
-                }
-
-                $("#rooms").append(title, supresses, "<h5>Level 1 monsters: </h5>", lvlOneString);
-                break;
-            }
-            case 1: {
-                let text = "Level 1 Room (TODO)"
-                $("#rooms").append(text);
-                break;
-
-            }
-            case 2: {
-                let text = "Level 2 Room (TODO)"
-                $("#rooms").append(text);
-                break;
-            }
-            case 3: {
-                specialRoomString = "Special Room (TODO)"
-                $("#rooms").append(specialRoomString);
-                break;
-            }
-            case 4: {
-                lordsLairString = "Catacomb Lord's Lair"
-                $("#rooms").append(lordsLairString);
-                break;
-            }
-
-        }
     }
 }
 
+function generateRoom(roomLevel) {
+    let specialRoom = false;
+    let selectedRoom;
+    switch (roomLevel) {
+        case 0: {
+            let randomIndex = Math.floor(Math.random() * Math.floor(lvlZeroRooms.length));
+            selectedRoom = lvlZeroRooms.splice(randomIndex, 1);
+            break;
+        }
+        case 1: {
+            let randomIndex = Math.floor(Math.random() * Math.floor(lvlOneRooms.length));
+            selectedRoom = lvlOneRooms.splice(randomIndex, 1);
+            break;
+        }
+        case 2: {
+            let randomIndex = Math.floor(Math.random() * Math.floor(lvlTwoRooms.length));
+            selectedRoom = lvlTwoRooms.splice(randomIndex, 1);
+            break;
+        }
+        case 3: {
+            let randomIndex = Math.floor(Math.random() * Math.floor(specialRooms.length));
+            selectedRoom = specialRooms.splice(randomIndex, 1);
+            specialRoom = true;
+            break;
+        }
+        case 4: {
+            specialRoom = true;
+            break;
+        }
+
+    }
+    if (!(specialRoom)) {
+
+        let title = "<h1>" + selectedRoom[0].name + "<h1>"
+        let suppresses = "<h4>" + "This room suppresses: " + selectedRoom[0].suppresses + "</h4>>"
+        let monsterString = 'Level 1 monsters: ';
+        if (selectedRoom[0].monsters.LevelOne != null) {
+            for (let monster of selectedRoom[0].monsters.LevelOne) {
+
+                monsterString += "Name: " + monster.name + " Amount: " + monster.amount  + "</br>"
+            }
+
+        } else {
+            monsterString = " </br>";
+        }
+
+        monsterString += 'Level 2 monsters: '
+        if (selectedRoom[0].monsters.LevelTwo != null) {
+            for (let monster of selectedRoom[0].monsters.LevelTwo) {
+
+                monsterString += "Name: " + monster.name + " Amount: " + monster.amount  + "</br>"
+            }
+
+        } else {
+            monsterString = " </br>";
+        }
+        monsterString += 'Level 3 monsters: '
+        if (selectedRoom[0].monsters.LevelThree != null) {
+            for (let monster of selectedRoom[0].monsters.LevelThree) {
+
+                monsterString += "Name: " + monster.name + " Amount: " + monster.amount  + "</br>"
+            }
+
+        } else {
+            monsterString = " </br>";
+        }
+
+        monsterString += 'Level 4 monsters: '
+        if (selectedRoom[0].monsters.LevelFour != null) {
+            for (let monster of selectedRoom[0].monsters.LevelFour) {
+
+                monsterString += "Name: " + monster.name + " Amount: " + monster.amount  + "</br>"
+            }
+
+        } else {
+            monsterString = " </br>";
+        }
+        $("#rooms").append(title, suppresses, monsterString);
+    } else {
+
+        $("#rooms").append(selectedRoom[0].name, selectedRoom[0].description);
+    }
+
+
+}

@@ -1,9 +1,18 @@
 var lvlZeroRooms = [
     {
-        id: '0', name: 'The Outer Bailey', roomLevel: '0', set: 'Base', extraInfo: null, suppresses: [], monsters: {
+        id: '0',
+        name: 'The Outer Bailey',
+        roomLevel: '0',
+        set: 'Base',
+        extraInfo: null,
+        suppresses: [],
+        monsters: {
             LevelOne: [{name: "Centaur", id: 1, amount: 2},
                 {name: "Orc", id: 0, amount: 1},
-                {name: "Mercenary", id: 100, amount: 2}], LevelTwo: [], LevelThree: [], LevelFour: [],
+                {name: "Mercenary", id: 100, amount: 2}],
+            LevelTwo: [],
+            LevelThree: [],
+            LevelFour: []
         }
     },
     {
@@ -11,13 +20,13 @@ var lvlZeroRooms = [
             LevelOne: [{name: "Skeleton Warrior", id: 2, amount: 1},
                 {name: "Zombie", id: 6, amount: 2},
                 {name: "Mercenary", id: 100, amount: 1},
-                {name: "Fire Spirit", id: 4, amount: 1}], LevelTwo: [], LevelThree: [], LevelFour: [],
+                {name: "Fire Spirit", id: 4, amount: 1}], LevelTwo: [], LevelThree: [], LevelFour: []
         }
     },
     {
         id: '2', name: 'Bholoth Cemetery', roomLevel: '0', set: 'Base', extraInfo: null, suppresses: [], monsters: {
             LevelOne: [{name: "Orc", id: 0, amount: 2},
-                {name: "Skeleton Warrior", id: 2, amount: 3}], LevelTwo: [], LevelThree: [], LevelFour: [],
+                {name: "Skeleton Warrior", id: 2, amount: 3}], LevelTwo: [], LevelThree: [], LevelFour: []
         }
     },
     {
