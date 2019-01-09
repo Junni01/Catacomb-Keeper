@@ -1,7 +1,12 @@
 let activeLord;
+let lordHealth;
 // let catacombsLayout = [0,1,5,1,1,5,2,5,6];
 let catacombsLayout = [0,1,3,1,1,3,2,3,4];
 
+let monsterid = 3;
+let monstaar = monsters.filter(x => x.id === monsterid);
+console.log(monsters);
+console.log(monstaar);
 // Populate Lord selection dropdown
 var select = document.getElementById("selectLord")
 for (let i = 0; i < lords.length; i++) {
@@ -44,6 +49,7 @@ function chooseLord() {
     var selectedLordID = $("#selectLord").val();
     if (selectedLordID != -1) {
         activeLord = lords[selectedLordID]
+        lordHealth = activeLord.health;
         $("#welcomeScreen").hide();
         generateCatacomb();
     }
@@ -95,7 +101,7 @@ function generateRoom(roomLevel) {
     }
 
 
-    if (!(specialRoom)) {
+    if (roomLevel == 0 || roomLevel == 1 || roomLevel == 2) {
 
         let title = "<h1>" + selectedRoom[0].name + "<h1>"
         
@@ -115,6 +121,9 @@ function generateRoom(roomLevel) {
         let monsterString = '<h3>Level 1 monsters: </h3>';
         if (selectedRoom[0].monsters.LevelOne.length > 0) {
             for (let monster of selectedRoom[0].monsters.LevelOne) {
+
+
+
                 if (monster.id != 100) {
                 monsterString += "Name: " + monster.name + " X " + monster.amount  + "</br>"
                 } else {
@@ -159,11 +168,29 @@ function generateRoom(roomLevel) {
         monsterString += "</br>"
         let roomString = "<div class=room>" + title + suppresses + monsterString + "</div>"
         $("#rooms").append(roomString);
-    } else {
-        specialRoomString = "<div>" + "<h1>" + selectedRoom[0].name + "</h1>" + "<p>" + selectedRoom[0].description + "</p>" + "</div>"
+    } else if (roomLevel == 3) {
+        specialRoomString = "<div class='specialRoom'>" + "<h1>" + selectedRoom[0].name + "</h1>" + "<p>" + selectedRoom[0].description + "</p>" + "</div>"
 
         $("#rooms").append(specialRoomString);
+    } else if (roomLevel == 4) {
+        let lordRoomString = `<h1>Catacomb Lord's Lair</h1>` + '<h3>' + activeLord.name + '</h3>' + "<h3> Health: " + lordHealth + "</h3>" + "<h3>Minions: </h3>";
+        for (let minion of activeLord.minions) {
+            lordRoomString += minion.name + " X " + minion.amount + "</br>";
+        }
+
+
+        $("#rooms").append("<div class='lordsRoom'>" + lordRoomString + "</div>")
+    } else {
+        $("#rooms").append("Error");
     }
 
 
 }
+
+
+function monsterIDCheck(monsterId) {
+
+    monsters.filter(x => x.id === monsterid);
+
+
+};

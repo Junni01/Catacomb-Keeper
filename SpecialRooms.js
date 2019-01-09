@@ -2,25 +2,29 @@ let specialRooms = [
     {
         id: 1,
         name: "Izchak the Merchant",
-        description:  `
-                        <ul>
-                        <li>Flip over 6 item cards</li>
-                        <li>Heroes may purchase any amount of cards for listed price.</li>
-                        <li>Pay 2 gold to see the next card on top of the deck.</li>
-                        <li>Pay 2 gold to purchase a map: reveal rest of the rooms.</li>
-                        </ul>`
+        description:  `<p>
+                        When the heroes arrive at Izchak, they may use their gold to buy items. 
+                        The overseer shuffles the deck of item cards and flips over 6 cards. 
+                        These items are available for purchase, or the players may pay 1 gold coin to see the next card on top of the item deck. 
+                        There is no limit as to how many times they may do this.
+                        </p>`
     },
     {
         id: 2,
         name: "Amaranth Inn",
         description:    `
-                        <ul><li>Recruit an ally for 10 Gold.</li></ul>
+                        <p>The heroes stop at the Amaranth Inn and meet with the Innkeeper. They may pool their gold to do any or all of the following activities:</p>
+                        <ul>
+                            <li>Sleep for a night at the Inn. Pay 8 gold coins and each living hero receives one health (in this case, they can exceed their starting health).</li>
+                            <li>Help the Innkeeper clear out his cellar. Pay 8 gold coins and each living hero receives one of each of the following unused items from the item deck: Vaiel's Urn, Healing Salve, Raisthrim's Potion, and Cloak of Invisibility. Any left over items are shuffled back into the item deck.</li>
+                            <li>Enjoy a meal in the hall and meet fellow travellers. Pay 10 gold coins to recruit an ally. Shuffle all unused Hero Portrait cards together. Randomly draw one card: this is the ally that may be recruited.</li>            
+                        </ul>
                         `
     },
     {
         id: 3,
         name: "Alewife Tavern",
-        description:  `<p>Test your luck to win items. Place 4 orcs, 4 Fire Spirits, 4 Centaurs and 4 Hero pieces into a bag and draw 3. Consult the following table of rewards from top to bottom:</p>
+        description:  `<p>Test your luck to win items, regain health or be cures of poison. Place 4 orcs, 4 Fire Spirits, 4 Centaurs and 4 Hero pieces into a bag. Heroes may pay 2 gold coins to blindly pull 3 pieces from the bag. Consult the following table of rewards from top to bottom:</p>
                     <table>
                         <tr>
                             <th>Result</th>
@@ -60,10 +64,7 @@ let specialRooms = [
     }, {
         id: 4,
         name: "Althea the Healer",
-        description: `<p>Althea cures 1 Poison card for free (the players
-                        decide which hero may discard a Poison card and shuffle
-                        it into the poison deck). The heroes may also purhase the
-                        following services:</p>
+        description: `<p>Althea offers rest and relief to the heroes. She will cure on poison card for free. She also enables the heroes to obtain the following services in exchange for and offering</p>
                     <table>
                         <tr>
                             <th>Service</th>
@@ -83,7 +84,7 @@ let specialRooms = [
                         <tr>
                             <td>Resurrect Hero</td>
                             <td>10 gold</td>
-                            <td>One dead hero is brought back to life with two health points. The hero returns to life with all of his or her gold coins and any unused Item and/or Spell cards. They may pay to be healed further by the Healer. The resurrected hero starts playing in the next room.</td>
+                            <td>One dead hero is brought back to life with two health points. The hero returns to life with all of his or her gold coins and any unused Item and/or Spell cards.</td>
                         </tr>
                     </table>
                     <p>Multiple services can be purchased from the Healer. Allies can be healed by the Healer, but not resurrected.</p>`
@@ -92,19 +93,9 @@ let specialRooms = [
         id: 5,
         name: "Altar of Soloth",
         description:  `
-                        <ul>
-                        <li>Pay 5 Gold coins to make an offering</li>
-                        <li>Flip over top item card and take it or discard it to the bottom of the deck.</li>
-                        <li>Pay 5 Gold to make another offering and flip over the next item card, but no more.</li>
-                        </ul>`
-    },
-    {
-        id: 7,
-        name: "Saurath",
-        description:  `
-                        <ul>
-                        <li>Shuffle the item card deck and draw 2 cards</li>
-                        <li>Assing the items to heroes if possible.</li>
-                        </ul>`
+                        <p>Pay 5 Gold coins to make an offering:
+                        Flip over top item card and take it or discard it to the bottom of the deck.
+                        Pay 5 Gold to make another offering and flip over the next item card, but only once.
+                        </p>`
     }
 ];

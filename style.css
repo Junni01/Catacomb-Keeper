@@ -1,10 +1,46 @@
+
+.container {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+
+}
+
 .room {
-background-color: darkgray;
-padding: 2%;
-border: 2px solid black;
-border-radius: 25px;
-width: 50%
+    margin: 25px;
+    background-color: darkgray;
+    padding: 5%;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+.specialRoom {
+    margin: 25px;
+    background-color: gold;
+    padding: 5%;
+    border: 2px solid black;
+    border-radius: 25px;
+}
 
+.bluemonster {
+    background-color: lightblue;
+    margin: 3px;
+}
 
+.greymonster {
+    background-color: gray;
+    margin: 3px;
+}
 
+.orangemonster {
+    background-color: lightsalmon;
+    margin: 3px;
+}
+.greenmonster {
+    background-color: lightgreen;
+    margin: 3px;
+}
+.brownmonster {
+    background-color: chocolate;
+    margin: 3px;
 }
