@@ -56,7 +56,6 @@ function generateCatacomb() {
     for (let roomlvl of catacombsLayout) {
 
         roomNumber += 1;
-
         generateRoom(roomlvl)
 
     }
@@ -88,61 +87,82 @@ function generateRoom(roomLevel) {
             break;
         }
         case 4: {
+            let randomIndex = Math.floor(Math.random() * Math.floor(specialRooms.length));
+            selectedRoom = specialRooms.splice(randomIndex, 1);
             specialRoom = true;
-            break;
         }
 
     }
+
+
     if (!(specialRoom)) {
 
         let title = "<h1>" + selectedRoom[0].name + "<h1>"
-        let suppresses = "<h4>" + "This room suppresses: " + selectedRoom[0].suppresses + "</h4>>"
-        let monsterString = 'Level 1 monsters: ';
-        if (selectedRoom[0].monsters.LevelOne != null) {
-            for (let monster of selectedRoom[0].monsters.LevelOne) {
+        
+        let suppresses = ''
+            
+        if (selectedRoom[0].suppresses.length > 0) {
+            
+            suppresses += "<h3> This room suppresses: </h3>"
+            
+            for (supression of selectedRoom[0].suppresses) {
+                    suppresses += (supression.modifier == null ? "" : supression.modifier) + " " + supression.type + "</br>"
+                }
+        } 
+            
+        
 
-                monsterString += "Name: " + monster.name + " Amount: " + monster.amount  + "</br>"
+        let monsterString = '<h3>Level 1 monsters: </h3>';
+        if (selectedRoom[0].monsters.LevelOne.length > 0) {
+            for (let monster of selectedRoom[0].monsters.LevelOne) {
+                if (monster.id != 100) {
+                monsterString += "Name: " + monster.name + " X " + monster.amount  + "</br>"
+                } else {
+                monsterString += "Name: " + activeLord.mercenaries[0].name + "(M)" +" X " + monster.amount  + "</br>"
+                }
             }
 
         } else {
-            monsterString = " </br>";
         }
 
-        monsterString += 'Level 2 monsters: '
-        if (selectedRoom[0].monsters.LevelTwo != null) {
+        monsterString += '<h3>Level 2 monsters: </h3>'
+        if (selectedRoom[0].monsters.LevelTwo.length > 0) {
             for (let monster of selectedRoom[0].monsters.LevelTwo) {
 
-                monsterString += "Name: " + monster.name + " Amount: " + monster.amount  + "</br>"
+                monsterString += "Name: " + monster.name + " X " + monster.amount  + "</br>"
             }
 
         } else {
-            monsterString = " </br>";
+            
         }
-        monsterString += 'Level 3 monsters: '
-        if (selectedRoom[0].monsters.LevelThree != null) {
+        monsterString += '<h3>Level 3 monsters: </h3>'
+        if (selectedRoom[0].monsters.LevelThree.length > 0) {
             for (let monster of selectedRoom[0].monsters.LevelThree) {
 
-                monsterString += "Name: " + monster.name + " Amount: " + monster.amount  + "</br>"
+                monsterString += "Name: " + monster.name + " X " + monster.amount  + "</br>"
             }
 
         } else {
-            monsterString = " </br>";
+ 
         }
 
-        monsterString += 'Level 4 monsters: '
-        if (selectedRoom[0].monsters.LevelFour != null) {
+        monsterString += '<h3>Level 4 monsters: </h3>'
+        if (selectedRoom[0].monsters.LevelFour.length > 0) {
             for (let monster of selectedRoom[0].monsters.LevelFour) {
 
-                monsterString += "Name: " + monster.name + " Amount: " + monster.amount  + "</br>"
+                monsterString += "Name: " + monster.name + " X " + monster.amount  + "</br>"
             }
 
         } else {
-            monsterString = " </br>";
-        }
-        $("#rooms").append(title, suppresses, monsterString);
-    } else {
 
-        $("#rooms").append(selectedRoom[0].name, selectedRoom[0].description);
+        }
+        monsterString += "</br>"
+        let roomString = "<div class=room>" + title + suppresses + monsterString + "</div>"
+        $("#rooms").append(roomString);
+    } else {
+        specialRoomString = "<div>" + "<h1>" + selectedRoom[0].name + "</h1>" + "<p>" + selectedRoom[0].description + "</p>" + "</div>"
+
+        $("#rooms").append(specialRoomString);
     }
 
 
