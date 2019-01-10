@@ -5,8 +5,7 @@ let catacombsLayout = [0,1,3,1,1,3,2,3,4];
 
 let monsterid = 3;
 let monstaar = monsters.filter(x => x.id === monsterid);
-console.log(monsters);
-console.log(monstaar);
+
 // Populate Lord selection dropdown
 var select = document.getElementById("selectLord")
 for (let i = 0; i < lords.length; i++) {
@@ -176,6 +175,22 @@ function generateRoom(roomLevel) {
         let lordRoomString = `<h1>Catacomb Lord's Lair</h1>` + '<h3>' + activeLord.name + '</h3>' + "<h3> Health: " + lordHealth + "</h3>" + "<h3>Minions: </h3>";
         for (let minion of activeLord.minions) {
             lordRoomString += minion.name + " X " + minion.amount + "</br>";
+        }
+        lordRoomString += "<h3>Attacks:</h3>"
+
+        for (let sequence of activeLord.shotSequences) {
+            lordRoomString += "<div class='attack'>"
+            console.log(sequence.sequence)
+            for (let attack of sequence.sequence) {
+                console.log(attack)
+                if (attack.type == "Summon") {
+                    lordRoomString += (attack.type == "Then" ? " > " : attack.type) + " " + attack.modifier
+                } else {
+                    lordRoomString += (attack.modifier == null ? "" : attack.modifier) + " " + (attack.type == "Then" ? " > " : attack.type)
+                }
+            }
+            lordRoomString += "</div>"
+
         }
 
 

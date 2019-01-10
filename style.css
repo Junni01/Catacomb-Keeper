@@ -9,7 +9,7 @@
 
 .room {
     margin: 25px;
-    background-color: darkgray;
+    background-color: azure;
     padding: 5%;
     border: 2px solid black;
     border-radius: 25px;
@@ -20,6 +20,21 @@
     padding: 5%;
     border: 2px solid black;
     border-radius: 25px;
+}
+
+.lordsRoom {
+    margin: 25px;
+    background-color: darkgray;
+    padding: 5%;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.attack {
+    background-color: cyan;
+    padding: 1%;
+    border: 1px solid black;
+    margin: 5px;
 }
 
 .bluemonster {
