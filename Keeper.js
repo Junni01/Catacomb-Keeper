@@ -124,9 +124,9 @@ function generateRoom(roomLevel) {
 
 
                 if (monster.id != 100) {
-                monsterString += "Name: " + monster.name + " X " + monster.amount  + "</br>"
+                monsterString += monster.name + " X " + monster.amount  + "</br>"
                 } else {
-                monsterString += "Name: " + activeLord.mercenaries[0].name + "(M)" +" X " + monster.amount  + "</br>"
+                monsterString += activeLord.mercenaries[0].name + "(M)" +" X " + monster.amount  + "</br>"
                 }
             }
 
@@ -137,7 +137,7 @@ function generateRoom(roomLevel) {
         if (selectedRoom[0].monsters.LevelTwo.length > 0) {
             for (let monster of selectedRoom[0].monsters.LevelTwo) {
 
-                monsterString += "Name: " + monster.name + " X " + monster.amount  + "</br>"
+                monsterString += monster.name + " X " + monster.amount  + "</br>"
             }
 
         } else {
@@ -147,7 +147,7 @@ function generateRoom(roomLevel) {
         if (selectedRoom[0].monsters.LevelThree.length > 0) {
             for (let monster of selectedRoom[0].monsters.LevelThree) {
 
-                monsterString += "Name: " + monster.name + " X " + monster.amount  + "</br>"
+                monsterString += monster.name + " X " + monster.amount  + "</br>"
             }
 
         } else {
@@ -158,7 +158,7 @@ function generateRoom(roomLevel) {
         if (selectedRoom[0].monsters.LevelFour.length > 0) {
             for (let monster of selectedRoom[0].monsters.LevelFour) {
 
-                monsterString += "Name: " + monster.name + " X " + monster.amount  + "</br>"
+                monsterString += monster.name + " X " + monster.amount  + "</br>"
             }
 
         } else {

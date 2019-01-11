@@ -1,6 +1,7 @@
 let specialRooms = [
     {
         id: 1,
+        className: "Merchant",
         name: "Izchak the Merchant",
         description:  `<p>
                         When the heroes arrive at Izchak, they may use their gold to buy items. 
@@ -11,6 +12,7 @@ let specialRooms = [
     },
     {
         id: 2,
+        className: "Inn",
         name: "Amaranth Inn",
         description:    `
                         <p>The heroes stop at the Amaranth Inn and meet with the Innkeeper. They may pool their gold to do any or all of the following activities:</p>
@@ -23,6 +25,7 @@ let specialRooms = [
     },
     {
         id: 3,
+        className: "Tavern",
         name: "Alewife Tavern",
         description:  `<p>Test your luck to win items, regain health or be cures of poison. Place 4 orcs, 4 Fire Spirits, 4 Centaurs and 4 Hero pieces into a bag. Heroes may pay 2 gold coins to blindly pull 3 pieces from the bag. Consult the following table of rewards from top to bottom:</p>
                     <table>
@@ -63,6 +66,7 @@ let specialRooms = [
                     </p>`
     }, {
         id: 4,
+        className: "Healer",
         name: "Althea the Healer",
         description: `<p>Althea offers rest and relief to the heroes. She will cure on poison card for free. She also enables the heroes to obtain the following services in exchange for and offering</p>
                     <table>
@@ -92,6 +96,7 @@ let specialRooms = [
     {
         id: 5,
         name: "Altar of Soloth",
+        className: "Altar",
         description:  `
                         <p>Pay 5 Gold coins to make an offering:
                         Flip over top item card and take it or discard it to the bottom of the deck.

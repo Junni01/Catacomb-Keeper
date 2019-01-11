@@ -23,7 +23,6 @@
         id: 1,
         name: "Skeleton Warrior"
       }],
-      //sequence2: [{id:1, sequence: [{type: "melee", modifier: null} ]},{},{}],
       shotSequences: [
           {
             id: 1,
@@ -74,8 +73,8 @@
         id: 4,
         name: "Fire Spirit"
       }],
-      shotSequences: {
-        0: [
+      shotSequences: [
+        { id: 1, sequence: [
           {
             type: "Melee",
             modifier: null
@@ -96,8 +95,8 @@
             type: "Rush",
             modifier: null
           },
-        ],
-        1: [
+        ]},
+        { id: 2, sequence: [
           {
             type: "Melee",
             modifier: "Chain"
@@ -126,8 +125,8 @@
             type: "Melee",
             modifier: "Chain"
           }
-        ],
-        2: [
+        ]},
+        { id: 3, sequence: [
           {
             type: "Fireball",
             modifier: "Chain"
@@ -157,8 +156,8 @@
             modifier: "Chain"
           }
 
-        ],
-        3: [
+        ] },
+        { id: 4, sequence:[
           {
             type: "Melee",
             modifier: null
@@ -171,8 +170,8 @@
             type: "Summon",
             modifier: "Fire Spirit"
           }
-        ],
-      }
+        ]}
+      ]
 
     },
     {
@@ -185,7 +184,8 @@
       suppresses: [],
       nullifies: [],
       reflects: [],
-      minions: [{
+      minions: [
+          {
         id: 2,
         name: "Skeleton Warrior",
         amount: 4
@@ -203,30 +203,32 @@
         id: 6,
         name: "Zombie"
       }],
-      shotSequences: {
-        0: [
-          {
-            type: "Rush",
-            modifier: null
-          },
-          {
-            type: "Then",
-            modifier: null
-          },
-          {
-            type: "Summon",
-            modifier: "Skeleton Warrior"
-          },
-          {
-            type: "Then",
-            modifier: null
-          },
-          {
-            type: "Melee",
-            modifier: null
-          },
-        ],
-        1: [
+      shotSequences: [
+        {
+          id: 1, sequence: [
+            {
+              type: "Rush",
+              modifier: null
+            },
+            {
+              type: "Then",
+              modifier: null
+            },
+            {
+              type: "Summon",
+              modifier: "Skeleton Warrior"
+            },
+            {
+              type: "Then",
+              modifier: null
+            },
+            {
+              type: "Melee",
+              modifier: null
+            },
+          ]
+        },
+        { id: 2, sequence: [
           {
             type: "Rush",
             modifier: null
@@ -247,8 +249,8 @@
             type: "Melee",
             modifier: null
           }
-        ],
-        2: [
+        ]},
+        { id: 3, sequence: [
           {
             type: "Rush",
             modifier: null
@@ -262,8 +264,8 @@
             modifier: "Ghoul"
           }
 
-        ],
-        3: [
+        ] },
+        { id: 3, sequence: [
           {
             type: "Melee",
             modifier: null
@@ -276,8 +278,8 @@
             type: "Missile",
             modifier: null
           }
-        ],
-      }
+        ]}
+      ]
 
     },
     {
@@ -307,8 +309,8 @@
         id: 1,
         name: "Centaur"
       }],
-      shotSequences: {
-        0: [
+      shotSequences: [
+        { id: 1, sequence: [
           {
             type: "Melee",
             modifier: null
@@ -321,8 +323,8 @@
             type: "Missile",
             modifier: "Stun"
           }
-        ],
-        1: [
+        ] },
+        { id: 2, sequence: [
           {
             type: "Melee",
             modifier: "Poison"
@@ -335,8 +337,8 @@
             type: "Melee",
             modifier: "Poison"
           }
-        ],
-        2: [
+        ] },
+        { id: 3, sequence: [
           {
             type: "Melee",
             modifier: "Petrify"
@@ -344,6 +346,7 @@
 
         ]
       }
+      ]
     },
     {
       id: 4,
@@ -372,8 +375,8 @@
         id: 5,
         name: "Sewer Rat"
       }],
-      shotSequences: {
-        0: [
+      shotSequences: [
+        { id: 1, sequence: [
           {
             type: "Melee",
             modifier: "Regeneration"
@@ -394,8 +397,8 @@
             type: "Teleport",
             modifier: null
           },
-        ],
-        1: [
+        ] },
+        { id: 2, sequence: [
           {
             type: "Melee",
             modifier: null
@@ -429,8 +432,8 @@
             type: "Teleport",
             modifier: null
           },
-        ],
-        2: [
+        ] },
+        { id: 3, sequence: [
           {
             type: "Summon",
             modifier: "Wight"
@@ -452,22 +455,24 @@
             modifier: null
           }
 
-        ],
-        3: [
-          {
-            type: "Rush",
-            modifier: null
-          },
-          {
-            type: "Then",
-            modifier: null
-          },
-          {
-            type: "Melee",
-            modifier: "Stun"
-          }
-        ],
-      }
+        ] },
+        {
+          id: 4, sequence: [
+            {
+              type: "Rush",
+              modifier: null
+            },
+            {
+              type: "Then",
+              modifier: null
+            },
+            {
+              type: "Melee",
+              modifier: "Stun"
+            }
+          ]
+        }
+      ]
 
     },
     {
@@ -503,8 +508,8 @@
         id: 0,
         name: "Orc"
       }],
-      shotSequences: {
-        0: [
+      shotSequences: [
+        { id: 1, sequence: [
           {
             type: "Melee",
             modifier: null
@@ -525,32 +530,33 @@
             type: "Repeat",
             modifier: null
           },
-        ],
-        1: [
+        ]},
+    {
+id: 2, sequence:[
           {
             type: "Melee",
             modifier: "Critical"
           },
-          {
-            type: "Then",
-            modifier: null
-          },
-          {
-            type: "Melee",
-            modifier: null
-          },
-          {
-            type: "Then",
-            modifier: null
-          },
-          {
-            type: "Repear",
-            modifier: null
-          }
-        ]
-      }
-
+    {
+      type: "Then",
+      modifier: null
     },
+    {
+      type: "Melee",
+      modifier: null
+    },
+    {
+      type: "Then",
+      modifier: null
+    },
+    {
+      type: "Repeat",
+      modifier: null
+    }
+  ]
+  }
+  ]
+  },
     {
       id: 6,
       name: "Kaulaurn The Hydra",
@@ -578,59 +584,13 @@
         id: 3,
         name: "Armoured Beetle"
       }],
-      shotSequences: {
-        0: [
+      shotSequences: [
+        {
+          id: 1,
+          sequence: [
           {
             type: "Melee",
             modifier: null
-          },
-          {
-            type: "Then",
-            modifier: null
-          },
-          {
-            type: "Melee",
-            modifier: "Critical"
-          }
-        ],
-        1: [
-          {
-            type: "Melee",
-            modifier: null
-          },
-          {
-            type: "Then",
-            modifier: null
-          },
-          {
-            type: "Fireball",
-            modifier: null
-          },
-          {
-            type: "Melee",
-            modifier: null
-          },
-          {
-            type: "Then",
-            modifier: null
-          },
-          {
-            type: "Fireball",
-            modifier: null
-          }
-        ],
-        2: [
-          {
-            type: "Melee",
-            modifier: null
-          },
-          {
-            type: "Then",
-            modifier: null
-          },
-          {
-            type: "Melee",
-            modifier: "Critical"
           },
           {
             type: "Then",
@@ -641,7 +601,57 @@
             modifier: "Critical"
           }
         ]
-      }
+        }
+        ,
+        { id: 2, sequence: [
+          {
+            type: "Melee",
+            modifier: null
+          },
+          {
+            type: "Then",
+            modifier: null
+          },
+          {
+            type: "Fireball",
+            modifier: null
+          },
+          {
+            type: "Melee",
+            modifier: null
+          },
+          {
+            type: "Then",
+            modifier: null
+          },
+          {
+            type: "Fireball",
+            modifier: null
+          }
+        ]},
+        { id: 3, sequence: [
+          {
+            type: "Melee",
+            modifier: null
+          },
+          {
+            type: "Then",
+            modifier: null
+          },
+          {
+            type: "Melee",
+            modifier: "Critical"
+          },
+          {
+            type: "Then",
+            modifier: null
+          },
+          {
+            type: "Melee",
+            modifier: "Critical"
+          }
+        ]}
+      ]
     },
     {
       id: 7,

@@ -1,5 +1,6 @@
+a = [{ id: 1, sequence: [ { type: "", modifier: ""}, {type: "", modifier: ""}] }, { id: 1, sequence: [ { type: "", modifier: ""}, {type: "", modifier: ""}] }];
 
-   var monsters = [
+var monsters = [
     {
       "id": 1,
       "name": "Orc",
