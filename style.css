@@ -36,26 +36,59 @@
     border: 1px solid black;
     margin: 5px;
 }
-
-.bluemonster {
-    background-color: lightblue;
+.monsterGroup {
+    border-radius: 10px;
+    background-color: white;
+    display:inline-block;
+    border: 5px dotted dimgray;
     margin: 3px;
+    padding: 2px;
+}
+.dungeonMonster {
+    border-radius: 10px;
+    background-color: white;
+    display:inline-block;
+    border: 5px solid green;
+    margin: 3px;
+    padding: 3px;
 }
 
-.greymonster {
-    background-color: gray;
+.mythMonster {
+    border-radius: 10px;
+    background-color: white;
+    display:inline-block;
+    border: 5px solid blue;
     margin: 3px;
+    padding: 2px;
 }
 
-.orangemonster {
-    background-color: lightsalmon;
+.verminMonster {
+    border-radius: 10px;
+    background-color: white;
+    display:inline-block;
+    border: 5px solid saddlebrown;
     margin: 3px;
+    padding: 2px;
 }
-.greenmonster {
-    background-color: lightgreen;
+.undeadMonster {
+    border-radius: 10px;
+    background-color: white;
+    display:inline-block;
+    border: 5px solid darkgrey;
     margin: 3px;
+    padding: 2px;
 }
-.brownmonster {
-    background-color: chocolate;
+.infernalMonster {
+    border-radius: 10px;
+    background-color: white;
+    display:inline-block;
+    border: 5px solid orange;
     margin: 3px;
+    padding: 2px;
 }
+.amount {
+    font-size: large;
+    display:inline-block;
+    font-weight: bold;
+    margin: 2px;
+    }

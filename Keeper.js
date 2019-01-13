@@ -1,19 +1,19 @@
 let activeLord;
 let lordHealth;
 // let catacombsLayout = [0,1,5,1,1,5,2,5,6];
-let catacombsLayout = [0,1,3,1,1,3,2,3,4];
+let catacombsLayout = [0, 1, 3, 1, 1, 3, 2, 3, 4];
 
-let monsterid = 3;
-let monstaar = monsters.filter(x => x.id === monsterid);
 
 // Populate Lord selection dropdown
 var select = document.getElementById("selectLord")
+
 for (let i = 0; i < lords.length; i++) {
     let el = document.createElement("option");
     el.textContent = lords[i].name;
     el.value = lords[i].id;
     select.appendChild(el);
 }
+
 
 
 // Display information of the selected Lord
@@ -61,7 +61,7 @@ function generateCatacomb() {
     for (let roomlvl of catacombsLayout) {
 
         roomNumber += 1;
-        generateRoom(roomlvl)
+        generateRoom(roomlvl, roomNumber)
 
     }
 }
@@ -103,62 +103,96 @@ function generateRoom(roomLevel) {
     if (roomLevel == 0 || roomLevel == 1 || roomLevel == 2) {
 
         let title = "<h1>" + selectedRoom[0].name + "<h1>"
-        
+
         let suppresses = ''
-            
+
         if (selectedRoom[0].suppresses.length > 0) {
-            
+
             suppresses += "<h3> This room suppresses: </h3>"
-            
-            for (supression of selectedRoom[0].suppresses) {
-                    suppresses += (supression.modifier == null ? "" : supression.modifier) + " " + supression.type + "</br>"
-                }
-        } 
-            
-        
+
+            for ( let suppression of selectedRoom[0].suppresses) {
+                suppresses += (suppression.modifier == null ? "" : suppression.modifier) + " " + suppression.type + "</br>"
+            }
+        }
+
 
         let monsterString = '<h3>Level 1 monsters: </h3>';
         if (selectedRoom[0].monsters.LevelOne.length > 0) {
+            let monsterInfo
             for (let monster of selectedRoom[0].monsters.LevelOne) {
 
 
 
-                if (monster.id != 100) {
-                monsterString += monster.name + " X " + monster.amount  + "</br>"
-                } else {
-                monsterString += activeLord.mercenaries[0].name + "(M)" +" X " + monster.amount  + "</br>"
+                if (monster.id == 100) {
+
+
+                    monsterInfo = monsterIDCheck(activeLord.mercenaries[0].id);
+                    monsterString += "<div class='" + monsterBorderColor(monsterInfo[0].family) + "'>" + activeLord.mercenaries[0].name + "(M)" + "</div>" + "<div class='amount'> X " + monster.amount + "</div></br>"
+
+
+                } else if (monster.id == 201) {
+
+                    monsterString += "<div class='monsterGroup'>" + monster.name + "</div>" + "<div class='amount'> X " + monster.amount + "</div></br>"
+                }
+                else {
+
+                    monsterInfo = monsterIDCheck(monster.id);
+                    monsterString += "<div class='" + monsterBorderColor(monsterInfo[0].family) + "'>" + monster.name + "</div>" + "<div class='amount'> X " + monster.amount + "</div></br>"
                 }
             }
 
         } else {
+
         }
 
         monsterString += '<h3>Level 2 monsters: </h3>'
         if (selectedRoom[0].monsters.LevelTwo.length > 0) {
+            let monsterInfo
             for (let monster of selectedRoom[0].monsters.LevelTwo) {
+                if (monster.id == 202) {
 
-                monsterString += monster.name + " X " + monster.amount  + "</br>"
+                    monsterString += "<div class='monsterGroup'>" + monster.name + "</div><div class='amount'> X " + monster.amount + "</div></br>"
+                }
+                else {
+                    monsterInfo = monsterIDCheck(monster.id);
+                    monsterString += "<div class='" + monsterBorderColor(monsterInfo[0].family) + "'>" + monster.name + "</div><div class='amount'> X " + monster.amount + "</div></br>"
+                }
+
+
             }
 
         } else {
-            
+
         }
         monsterString += '<h3>Level 3 monsters: </h3>'
         if (selectedRoom[0].monsters.LevelThree.length > 0) {
+            let monsterInfo
             for (let monster of selectedRoom[0].monsters.LevelThree) {
-
-                monsterString += monster.name + " X " + monster.amount  + "</br>"
+                if (monster.id == 203) {
+                    monsterString += "<div class='monsterGroup'>" + monster.name + "</div><div class='amount'> X " + monster.amount + "</div></br>"
+                }
+                else {
+                    monsterInfo = monsterIDCheck(monster.id);
+                    monsterString += "<div class='" + monsterBorderColor(monsterInfo[0].family) + "'>" + monster.name + "</div><div class='amount'> X " + monster.amount + "</div></br>"
+                }
             }
 
         } else {
- 
+
         }
 
         monsterString += '<h3>Level 4 monsters: </h3>'
         if (selectedRoom[0].monsters.LevelFour.length > 0) {
+            let monsterInfo
             for (let monster of selectedRoom[0].monsters.LevelFour) {
 
-                monsterString += monster.name + " X " + monster.amount  + "</br>"
+                if (monster.id == 204) {
+                    monsterString += "<div class='monsterGroup'>" + monster.name + "</div><div class='amount'> X " + monster.amount + "</div></br>"
+                }
+                else {
+                    monsterInfo = monsterIDCheck(monster.id);
+                    monsterString += "<div class='" + monsterBorderColor(monsterInfo[0].family) + "'>" + monster.name + "</div><div class='amount'> X " + monster.amount + "</div></br>"
+                }
             }
 
         } else {
@@ -180,9 +214,9 @@ function generateRoom(roomLevel) {
 
         for (let sequence of activeLord.shotSequences) {
             lordRoomString += "<div class='attack'>"
-            console.log(sequence.sequence)
+
             for (let attack of sequence.sequence) {
-                console.log(attack)
+
                 if (attack.type == "Summon") {
                     lordRoomString += (attack.type == "Then" ? " > " : attack.type) + " " + attack.modifier
                 } else {
@@ -205,7 +239,19 @@ function generateRoom(roomLevel) {
 
 function monsterIDCheck(monsterId) {
 
-    monsters.filter(x => x.id === monsterid);
-
+    return monsters.filter(x => x.id === monsterId);
 
 };
+
+function monsterBorderColor(family) {
+    switch(family) {
+        case 'Dungeon': return "dungeonMonster"
+        case 'Mythological': return "mythMonster"
+        case 'Undead': return "undeadMonster"
+        case 'Vermin': return "verminMonster"
+        case 'Infernal': return "infernalMonster"
+    }
+
+
+
+}

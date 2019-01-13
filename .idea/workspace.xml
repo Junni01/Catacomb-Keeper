@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Monsters.js" line="114" />
+    <bookmark url="file://$PROJECT_DIR$/Monsters.js" line="951" />
     <bookmark url="file://$PROJECT_DIR$/SpecialRooms.js" line="70" />
   </component>
   <component name="ChangeListManager">
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpecialRooms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            <state relative-caret-position="425">
+              <caret line="43" column="89" lean-forward="true" selection-start-line="43" selection-start-column="89" selection-end-line="43" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -29,8 +29,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Keeper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="157" column="60" lean-forward="true" selection-start-line="157" selection-start-column="60" selection-end-line="157" selection-end-column="60" />
+            <state relative-caret-position="399">
+              <caret line="193" column="183" selection-start-line="193" selection-start-column="183" selection-end-line="193" selection-end-column="183" />
+              <folding>
+                <element signature="e#325#467#0" />
+                <element signature="n#!!block;n#displayLord#0" />
+                <element signature="n#!!block;n#chooseLord#0" />
+                <element signature="e#2140#3218#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,30 +44,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lords.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="804" lean-forward="true" selection-start-line="804" selection-end-line="804" />
-              <folding>
-                <element signature="e#23#1257#0" />
-                <element signature="e#1263#3752#0" />
-                <element signature="e#1799#3745#0" />
-                <element signature="e#3692#5763#0" />
-                <element signature="e#3895#4140#0" />
-                <element signature="e#4162#4209#0" />
-                <element signature="e#5630#6833#0" />
-                <element signature="e#6804#9262#0" />
-                <element signature="e#9203#10614#0" />
-                <element signature="e#10704#12641#0" />
-                <element signature="e#12647#15443#0" />
-              </folding>
+            <state relative-caret-position="14450">
+              <caret line="850" column="21" lean-forward="true" selection-start-line="850" selection-start-column="21" selection-end-line="850" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+            <state relative-caret-position="501">
+              <caret line="76" column="31" lean-forward="true" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -69,8 +62,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Monsters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="158" selection-start-column="158" selection-end-column="158" />
+            <state relative-caret-position="1947">
+              <caret line="259" column="26" lean-forward="true" selection-start-line="259" selection-start-column="26" selection-end-line="259" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -78,17 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rooms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1564">
-              <caret line="28" column="61" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            <state relative-caret-position="-17">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -104,6 +97,21 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>FALSE</find>
+      <find>False</find>
+      <find>'False'</find>
+      <find>TRUE</find>
+      <find>console</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>False</replace>
+      <replace>'False'</replace>
+      <replace>false</replace>
+      <replace>true</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -116,11 +124,11 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/Rooms.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/SpecialRooms.js" />
+        <option value="$PROJECT_DIR$/Lords.js" />
         <option value="$PROJECT_DIR$/Monsters.js" />
         <option value="$PROJECT_DIR$/Keeper.js" />
-        <option value="$PROJECT_DIR$/Lords.js" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -142,6 +150,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,7 +162,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,16 +207,17 @@
       <workItem from="1547058031736" duration="7097000" />
       <workItem from="1547147335724" duration="6524000" />
       <workItem from="1547188031708" duration="3467000" />
+      <workItem from="1547392632349" duration="8109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53813000" />
+    <option name="totallyTimeSpent" value="61922000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.062170707" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -249,65 +258,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpecialRooms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rooms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1564">
-          <caret line="28" column="61" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="61" />
+        <state relative-caret-position="136">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Monsters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="158" selection-start-column="158" selection-end-column="158" />
+        <state relative-caret-position="1947">
+          <caret line="259" column="26" lean-forward="true" selection-start-line="259" selection-start-column="26" selection-end-line="259" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Keeper.js">
+    <entry file="file://$PROJECT_DIR$/Rooms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="157" column="60" lean-forward="true" selection-start-line="157" selection-start-column="60" selection-end-line="157" selection-end-column="60" />
+        <state relative-caret-position="-17">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lords.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="804" lean-forward="true" selection-start-line="804" selection-end-line="804" />
+        <state relative-caret-position="14450">
+          <caret line="850" column="21" lean-forward="true" selection-start-line="850" selection-start-column="21" selection-end-line="850" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecialRooms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="43" column="89" lean-forward="true" selection-start-line="43" selection-start-column="89" selection-end-line="43" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keeper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="193" column="183" selection-start-line="193" selection-start-column="183" selection-end-line="193" selection-end-column="183" />
           <folding>
-            <element signature="e#23#1257#0" />
-            <element signature="e#1263#3752#0" />
-            <element signature="e#1799#3745#0" />
-            <element signature="e#3692#5763#0" />
-            <element signature="e#3895#4140#0" />
-            <element signature="e#4162#4209#0" />
-            <element signature="e#5630#6833#0" />
-            <element signature="e#6804#9262#0" />
-            <element signature="e#9203#10614#0" />
-            <element signature="e#10704#12641#0" />
-            <element signature="e#12647#15443#0" />
+            <element signature="e#325#467#0" />
+            <element signature="n#!!block;n#displayLord#0" />
+            <element signature="n#!!block;n#chooseLord#0" />
+            <element signature="e#2140#3218#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        <state relative-caret-position="501">
+          <caret line="76" column="31" lean-forward="true" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
         </state>
       </provider>
     </entry>
